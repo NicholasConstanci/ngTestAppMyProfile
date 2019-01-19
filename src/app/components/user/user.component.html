@@ -1,0 +1,14 @@
+<h1>
+  Hello, I'm {{name}}.
+</h1>
+<p>I'm a {{age}} years old developer.
+  <br/>My contact email address is {{email}}
+  <br/>I live at <strong title= "I'm not gonna put my address here!">{{address.street}}</strong>, {{address.city}} - {{address.state}}
+</p>
+<p>
+  Some of my hobbies are:
+</p>
+<button (click) = "toggleList()">{{ isListVisible ? 'Hide' : 'Show'}} List</button>
+<ul *ngIf="isListVisible">
+  <li *ngFor="let hobby of hobbies;">{{hobby}}</li>
+</ul>
